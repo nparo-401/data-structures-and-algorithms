@@ -1,6 +1,13 @@
 **Data Structures and Algorithms**
 
-# Reverse and Array
+**Table of Contents**
+
+Reverse an Array
+* [Documentation](#reverse-an-array)
+* [Code](code401challenges/ArrayReverse.java)
+
+<a name="reverse-an-array"></a>
+# Reverse an Array
 Write a method to reverse an array of integers.
 
 ## Challenge
@@ -26,4 +33,4 @@ which takes in one parameter - an int array.
 * Chris Coulon
 
 ## Solution
-![Reverse an Array](code401challenges/assets/reverse-an-array.jpg)
+![Reverse an Array](assets/reverse-an-array.jpg)
