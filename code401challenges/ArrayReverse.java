@@ -7,8 +7,13 @@ public class ArrayReverse {
   }
 
   public static int[] reverseArray(int[] arr) {
-    
+    int len = arr.length;
+    int[] reversedArr = new int[len];
 
-    return arr;
+    for(int i=0; i < arr.length; i++){
+      reversedArr[(len - 1) - i] = arr[i];
+    }
+
+    return reversedArr;
   }
 }
