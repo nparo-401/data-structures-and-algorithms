@@ -1,6 +1,6 @@
 **Data Structures and Algorithms**
 
-**Table of Contents**
+# Table of Contents
 
 Reverse an Array
 * [Documentation](#reverse-an-array)
