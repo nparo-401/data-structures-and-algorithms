@@ -35,9 +35,9 @@ public class ArrayShiftTest {
 
     // Expected Failure
     assertNotEquals(
-        "Length does not match",
-        testArr3,
-        ArrayShift.insertShiftArray(testArr3, 0)
+        "Length should not match",
+        testArr3.length,
+        ArrayShift.insertShiftArray(testArr3, 0).length
     );
   }
 }
