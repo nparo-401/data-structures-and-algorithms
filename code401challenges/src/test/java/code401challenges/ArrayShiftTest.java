@@ -7,37 +7,49 @@ import static org.junit.Assert.*;
 public class ArrayShiftTest {
 
   @Test
-  public void testInsertShiftArray_desiredPass() {
+  public void testInsertShiftArray_EvenLengthArray() {
     int[] testArr = new int[]{2,4,6,8};
-    int[] testArr2 = new int[]{4,8,15,23,42};
-    int[] testArr3 = new int[]{};
     int[] finalArr = new int[]{2,4,5,6,8};
-    int[] finalArr2 = new int[]{4,8,15,16,23,42};
-    int[] finalArr3 = new int[]{0};
 
     assertArrayEquals(
         "Shifted array does not equal expected array",
         finalArr,
         ArrayShift.insertShiftArray(testArr, 5)
     );
+  }
+
+  @Test
+  public void testInsertShiftArray_OddLengthArray() {
+    int[] testArr = new int[]{4,8,15,23,42};
+    int[] finalArr = new int[]{4,8,15,16,23,42};
 
     assertArrayEquals(
         "Shifted array does not equal expected array",
-        finalArr2,
-        ArrayShift.insertShiftArray(testArr2, 16)
+        finalArr,
+        ArrayShift.insertShiftArray(testArr, 16)
     );
+  }
+
+  @Test
+  public void testInsertShiftArray_ZeroLengthArray() {
+    int[] testArr = new int[]{};
+    int[] finalArr = new int[]{0};
 
     assertArrayEquals(
         "Shifted array does not equal expected array",
-        finalArr3,
-        ArrayShift.insertShiftArray(testArr3, 0)
+        finalArr,
+        ArrayShift.insertShiftArray(testArr, 0)
     );
+  }
 
-    // Expected Failure
+  @Test
+  public void testInsertShiftArray_ExpectedFail() {
+    int[] testArr = new int[]{};
+
     assertNotEquals(
         "Length should not match",
-        testArr3.length,
-        ArrayShift.insertShiftArray(testArr3, 0).length
+        0,
+        ArrayShift.insertShiftArray(testArr, 0).length
     );
   }
 }
