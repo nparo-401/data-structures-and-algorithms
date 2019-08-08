@@ -37,12 +37,32 @@ public class BinarySearchTest {
   }
 
   @Test
-  public void testBinarySearch_SearchKeyNotInArray() {
+  public void testBinarySearch_SearchKeyGreaterThanInArray() {
     int[] testArr = new int[]{1,2,3,4};
     assertEquals(
-        "SearchKeyNotInArray should return -1",
+        "SearchKeyGraterThanInArray should return -1",
         -1,
         BinarySearch.binarySearch(testArr, 9)
+    );
+  }
+
+  @Test
+  public void testBinarySearch_SearchKeyLessThanInArray() {
+    int[] testArr = new int[]{1,2,3,4,5};
+    assertEquals(
+        "SearchKeyLessThanInArray should return -1",
+        -1,
+        BinarySearch.binarySearch(testArr, 0)
+    );
+  }
+
+  @Test
+  public void testBinarySearch_FirstMidValue() {
+    int[] testArr = new int[]{1,2,3,4,5};
+    assertEquals(
+        "FirstMidValue should return an index of 2",
+        2,
+        BinarySearch.binarySearch(testArr, 3)
     );
   }
 }

@@ -5,7 +5,7 @@ public class BinarySearch {
     int begin = 0;
     int end = arr.length - 1;
 
-    while (begin < end || begin == end) {
+    while (begin <= end) {
       int mid = (int)Math.ceil(((double)begin + (double)end) / 2);
       if (arr[mid] == n) return mid;
       else if (arr[mid] < n) begin = mid + 1;
