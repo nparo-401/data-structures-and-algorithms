@@ -12,7 +12,7 @@ methods.
 ### Approach and Efficiency
 For this challenge we approaching this method with the following steps:
 * First: initialize `int begin = 0` and `int end = arr.length - 1`
-* Second: enter a while loop with a condition of `begin < end`
+* Second: enter a while loop with a condition of `begin <= end`
   * assign the `int mid = (begin + end) / 2`
   * check if arr[mid] is equal to search key
     * return mid if true
