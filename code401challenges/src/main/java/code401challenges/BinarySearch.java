@@ -6,10 +6,10 @@ public class BinarySearch {
     int end = arr.length - 1;
 
     while (begin <= end) {
-      int mid = (int)Math.ceil(((double)begin + (double)end) / 2);
+      int mid = (begin + end) / 2;
       if (arr[mid] == n) return mid;
       else if (arr[mid] < n) begin = mid + 1;
-      else if (arr[mid] > n) end = mid - 1;
+      else end = mid - 1;
     }
 
     return -1;
