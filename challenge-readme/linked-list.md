@@ -15,7 +15,7 @@ Create a singly linked list with an insert, includes, and toString method. Addit
   * [LinkedList.java](../code401challenges/src/main/java/linkedList/LinkedList.java)
   * [Node.java](../code401challenges/src/main/java/linkedList/Node.java)
 * src/test/linkedList
-  * [Link to the Tests](../code401challenges/src/test/java/linkedList/LinkedListTest.java)
+  * [LinkedListTest.java](../code401challenges/src/test/java/linkedList/LinkedListTest.java)
 
 ### Approach and Efficiency
 * Approach: Create a test driven Class which follows best practices and has optimized time and space.
