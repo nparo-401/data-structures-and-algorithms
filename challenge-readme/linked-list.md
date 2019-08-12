@@ -11,10 +11,10 @@ Create a singly linked list with an insert, includes, and toString method. Addit
 * [Linked Lists](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.html)
 
 ### Files
-* src/main/Data-Structures/linkedList
+* src/main/linkedList
   * [LinkedList.java](../code401challenges/src/main/java/linkedList/LinkedList.java)
   * [Node.java](../code401challenges/src/main/java/linkedList/Node.java)
-* src/test/Data-Structures/linkedList
+* src/test/linkedList
   * [Link to the Tests](../code401challenges/src/test/java/linkedList/LinkedListTest.java)
 
 ### Approach and Efficiency
