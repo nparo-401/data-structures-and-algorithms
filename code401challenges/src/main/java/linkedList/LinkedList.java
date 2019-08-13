@@ -1,26 +1,32 @@
 package linkedList;
 
 public class LinkedList<T> {
-  public Node<T> head;
+  private Node<T> head;
 
   public LinkedList() {
     this.head = null;
   }
 
-  public void setHead(T item) {
-    this.head = new Node<>(item, null);
+  public void setHead(T value) {
+    this.head = new Node<>(value, null);
   }
 
-  public void insert(T item) {
+  public Node getHead() {
+    return this.head;
+  }
+
+  public void insertBeforeHead(T value) {
     Node<T> temp = this.head;
-    this.head = new Node<>(item, temp);
+    this.head = new Node<>(value, temp);
   }
 
   public boolean includes(T valueToCheck) {
     Node<T> current = this.head;
     while (current != null) {
-      if (current.data.equals(valueToCheck)) return true;
-      current = current.next;
+      if (current.getValue().equals(valueToCheck)) {
+        return true;
+      }
+      current = current.getNext();
     }
     return false;
   }
@@ -29,12 +35,12 @@ public class LinkedList<T> {
     StringBuilder response = new StringBuilder();
     Node<T> current = this.head;
     while (current != null) {
-      if (current.next != null) {
-        response.append(current.data).append(" ");
+      if (current.getNext() != null) {
+        response.append(current.getValue()).append(" ");
       } else {
-        response.append(current.data);
+        response.append(current.getValue());
       }
-      current = current.next;
+      current = current.getNext();
     }
     return response.toString();
   }
