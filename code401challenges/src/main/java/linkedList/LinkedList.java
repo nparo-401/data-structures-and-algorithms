@@ -42,16 +42,21 @@ public class LinkedList<T> {
 
   public void insertBefore(T value, T newValue) {
     Node<T> current = this.head;
+    if (current.getValue().equals(value)) {
+      prepend(newValue);
+      return;
+    }
     while (current != null) {
-      if (current.getValue().equals(value)) {
-        prepend(newValue);
+      if (current.getNext() == null) {
         return;
       } else if (current.getNext().getValue().equals(value)) {
         break;
       }
       current = current.getNext();
     }
-    assert current != null;
+    if (current == null) {
+      return;
+    }
     Node<T> newNode = new Node<>(newValue, current.getNext());
     current.setNext(newNode);
   }
@@ -64,7 +69,9 @@ public class LinkedList<T> {
       }
       current = current.getNext();
     }
-    assert current != null;
+    if (current == null) {
+      return;
+    }
     Node<T> newNode = new Node<>(newValue, current.getNext());
     current.setNext(newNode);
   }

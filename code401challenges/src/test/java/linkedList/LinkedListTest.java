@@ -190,6 +190,20 @@ public class LinkedListTest {
   }
 
   @Test
+  public void testInsertBefore_IntegerNotInLinkedList() {
+    LinkedList<Integer> testLL = new LinkedList<>();
+    testLL.setHead(111);
+    testLL.append(222);
+    testLL.insertBefore(333, 444);
+
+    assertEquals(
+        "testInsertBefore_IntegerNotInLinkedList should return: ",
+        "111 222 null",
+        testLL.toString()
+    );
+  }
+
+  @Test
   public void testInsertAfter_String() {
     LinkedList<String> testLL = new LinkedList<>();
     testLL.setHead("Hello");
@@ -210,8 +224,22 @@ public class LinkedListTest {
     testLL.insertAfter(222, 333);
 
     assertEquals(
-        "testInsertAfter_String should return: ",
+        "testInsertAfter_Integer should return: ",
         "111 222 333 null",
+        testLL.toString()
+    );
+  }
+
+  @Test
+  public void testInsertAfter_IntegerNotInLinkedList() {
+    LinkedList<Integer> testLL = new LinkedList<>();
+    testLL.setHead(111);
+    testLL.append(222);
+    testLL.insertAfter(333, 444);
+
+    assertEquals(
+        "testInsertAfter_IntegerNotInLinkedList should return: ",
+        "111 222 null",
         testLL.toString()
     );
   }
