@@ -20,25 +20,72 @@ Create a singly linked list with an insert, includes, and toString method. Addit
 ### Approach and Efficiency
 * Approach: Create a test driven Class which follows best practices and has optimized time and space.
 * Time and Space:
-  * setHead() : O(1) | O(1)
-  * insert() : O(1) | O(1)
-  * includes() : O(n) | O(1)
-  * toString() : O(n) | O(1)
+  * `setHead()` 
+    * Time: O(1) 
+    * Space: O(1)
+  * `insert()`
+    * Time: O(1) 
+    * Space: O(1)
+  * `includes()` 
+    * Time: O(n)
+    * Space: O(1)
+  * `append()`
+    * Time: O(n)
+    * Space: O(1)
+  * `insertBefore()`
+    * Time: O(n)
+    * Space: O(1)
+  * `insertAfter()`
+    * Time: O(n)
+    * Space: O(1)
+  * `toString()`
+    * Time: O(1) 
+    * Space: O(1)
+  * `setToString()`
+    * Time: O(1) 
+    * Space: O(1)
 
 ### API
 * LinkedList<T>
   * Variables:
-    * head: the first node of the linked list
+    * `head` 
+      * the first node of the linked list
   * Methods:
-    * setHead(T item) :
-      * Takes in an item (value) and assigns it to the head with a next pointer of null
-    * insert(T item) :
-      * Performs an insert before call which takes in an item (value), creates a temp val of the current head, reassigns a new node to head using the item as the val and the temp as the next
-    * includes(T valueToCheck) :
+    * `setHead(T value)`
+      * Takes in an value and assigns it to the head with a next pointer of null
+    * `getHead()`
+      * returns the head
+    * `prepend(T value)`
+      * Performs an insert before call which takes in an value, creates a temp val of the current head, reassigns a new node to head using the value as the val and the temp as the next
+    * `includes(T valueToCheck)`
       * Assigns the current value to the head and loops through the linked list while the current is not equal to the value being checked. Returns true if the value to be checked is in the linked list; returns false if the value to be checked is not in the linked list.
-    * toString() :
-      * Uses the StringBuilder class to create a response variable which builds and holds the values of the linked list to be printed.
+    * `append(T value)`
+      * Assigns `value` to a new node as the last element in the linked list
+    * `insertBefore(T value, T valueToBeAdded)`
+      * Assigns `value` before the node at `valueToBeAdded`
+    * `insertAfter(T value, T valueToBeAdded)`
+      * Assigns `value` after the node at `valueToBeAdded`
+    * `toString()`
+      * returns `setToString(this.head)`
+    * `setToString(Node<?> node)`
+      * checks if `node == null` and returns "null"
+      * returns a string of `node.getValue() + " " + setToString(node.getNext())`
 * Node<T>
   * Variables:
-    * data: the value of the node
-    * next: pointer to the next item in the linked list, null if the last item of the list
+    * `value`
+      * the value of the node
+    * `next`
+      * pointer to the next item in the linked list, null if the last item of the list
+    * `previous`
+      * pointer to the previous item in the linked list, null if the node is the head
+  * Methods:
+    * `getValue()`
+      * returns the value of the current node
+    * `setNext()`
+      * sets a pointer to the next value of the linked list
+    * `getNext()`
+      * returns the next value of the linked list
+    * `setPrevious()`
+      * sets a pointer to the previous value of the linked list
+    * `getPrevious()`
+      * returns the previous value of the linked list

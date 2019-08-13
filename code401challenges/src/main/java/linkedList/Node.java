@@ -1,26 +1,26 @@
 package linkedList;
 
 public class Node<T> {
-  private T data;
+  private T value;
   private Node<T> next;
   private Node<T> previous;
 
-  public Node(T data, Node<T> next) {
-    this.data = data;
+  Node(T value, Node<T> next) {
+    this.value = value;
     this.next = next;
   }
 
-  public Node(T data, Node<T> next, Node<T> previous) {
-    this.data = data;
+  Node(T value, Node<T> next, Node<T> previous) {
+    this.value = value;
     this.next = next;
     this.previous = previous;
   }
 
   public T getValue() {
-    return this.data;
+    return this.value;
   }
 
-  public void setNext(Node<T> node) {
+  void setNext(Node<T> node) {
     this.next = node;
   }
 
@@ -28,7 +28,7 @@ public class Node<T> {
     return this.next;
   }
 
-  public void setPrevious(Node<T> node) {
+  void setPrevious(Node<T> node) {
     this.previous = node;
   }
 

@@ -15,7 +15,7 @@ public class LinkedList<T> {
     return this.head;
   }
 
-  public void insertBeforeHead(T value) {
+  public void prepend(T value) {
     Node<T> temp = this.head;
     this.head = new Node<>(value, temp);
   }
@@ -31,17 +31,65 @@ public class LinkedList<T> {
     return false;
   }
 
-  public String toString() {
-    StringBuilder response = new StringBuilder();
+  public void append(T value) {
     Node<T> current = this.head;
+    while (current.getNext() != null) {
+      current = current.getNext();
+    }
+    Node<T> newNode = new Node<>(value, null);
+    current.setNext(newNode);
+  }
+
+  public void insertBefore(T value, T newValue) {
+    if (this.head == null) {
+      return;
+    }
+    Node<T> current = this.head;
+    if (current.getValue().equals(value)) {
+      prepend(newValue);
+      return;
+    }
     while (current != null) {
-      if (current.getNext() != null) {
-        response.append(current.getValue()).append(" ");
-      } else {
-        response.append(current.getValue());
+      if (current.getNext() == null) {
+        return;
+      } else if (current.getNext().getValue().equals(value)) {
+        break;
       }
       current = current.getNext();
     }
-    return response.toString();
+    if (current == null) {
+      return;
+    }
+    Node<T> newNode = new Node<>(newValue, current.getNext());
+    current.setNext(newNode);
+  }
+
+  public void insertAfter(T value, T newValue) {
+    if (this.head == null) {
+      return;
+    }
+    Node<T> current = this.head;
+    while (current != null) {
+      if (current.getValue().equals(value)) {
+        break;
+      }
+      current = current.getNext();
+    }
+    if (current == null) {
+      return;
+    }
+    Node<T> newNode = new Node<>(newValue, current.getNext());
+    current.setNext(newNode);
+  }
+
+  public String toString() {
+    return setToString(this.head);
+  }
+
+  private String setToString(Node<?> node) {
+    if (node == null) {
+      return "null";
+    }
+    return node.getValue() + " " + setToString(node.getNext());
   }
 }
