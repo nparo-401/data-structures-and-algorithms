@@ -164,6 +164,18 @@ public class LinkedListTest {
   }
 
   @Test
+  public void testInsertBefore_StringAsNewHead() {
+    LinkedList<String> testLL = new LinkedList<>();
+    testLL.setHead("Hello");
+    testLL.insertBefore("Hello", "World");
+
+    assertEquals(
+        "testInsertBefore_StringAsNewHead should return: ",
+        "World Hello null",
+        testLL.toString());
+  }
+
+  @Test
   public void testInsertBefore_Integer() {
     LinkedList<Integer> testLL = new LinkedList<>();
     testLL.setHead(111);

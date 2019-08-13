@@ -43,7 +43,10 @@ public class LinkedList<T> {
   public void insertBefore(T value, T newValue) {
     Node<T> current = this.head;
     while (current != null) {
-      if (current.getNext().getValue().equals(value)) {
+      if (current.getValue().equals(value)) {
+        prepend(newValue);
+        return;
+      } else if (current.getNext().getValue().equals(value)) {
         break;
       }
       current = current.getNext();
