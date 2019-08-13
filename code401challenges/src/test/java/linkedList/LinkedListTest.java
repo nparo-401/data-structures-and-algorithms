@@ -52,7 +52,7 @@ public class LinkedListTest {
   }
 
   @Test
-  public void testInsert_String() {
+  public void testPrepend_String() {
     LinkedList<String> testLL = new LinkedList<>();
     testLL.setHead("World");
     testLL.prepend("the");
@@ -69,7 +69,7 @@ public class LinkedListTest {
   }
 
   @Test
-  public void testInsert_Integer() {
+  public void testPrepend_Integer() {
     LinkedList<Integer> testLL = new LinkedList<>();
     testLL.setHead(111);
     testLL.prepend(222);
@@ -204,6 +204,18 @@ public class LinkedListTest {
   }
 
   @Test
+  public void testInsertBefore_IntegerEmptyLinkedList() {
+    LinkedList<Integer> testLL = new LinkedList<>();
+    testLL.insertBefore(null, 111);
+
+    assertEquals(
+        "testInsertBefore_IntegerEmptyLinkedList should return: ",
+        "null",
+        testLL.toString()
+    );
+  }
+
+  @Test
   public void testInsertAfter_String() {
     LinkedList<String> testLL = new LinkedList<>();
     testLL.setHead("Hello");
@@ -240,6 +252,18 @@ public class LinkedListTest {
     assertEquals(
         "testInsertAfter_IntegerNotInLinkedList should return: ",
         "111 222 null",
+        testLL.toString()
+    );
+  }
+
+  @Test
+  public void testInsertAfter_IntegerEmptyLinkedList() {
+    LinkedList<Integer> testLL = new LinkedList<>();
+    testLL.insertAfter(null, 111);
+
+    assertEquals(
+        "testInsertAfter_IntegerEmptyLinkedList should return: ",
+        "null",
         testLL.toString()
     );
   }

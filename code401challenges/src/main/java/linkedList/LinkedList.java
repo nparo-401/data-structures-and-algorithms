@@ -41,6 +41,9 @@ public class LinkedList<T> {
   }
 
   public void insertBefore(T value, T newValue) {
+    if (this.head == null) {
+      return;
+    }
     Node<T> current = this.head;
     if (current.getValue().equals(value)) {
       prepend(newValue);
@@ -62,6 +65,9 @@ public class LinkedList<T> {
   }
 
   public void insertAfter(T value, T newValue) {
+    if (this.head == null) {
+      return;
+    }
     Node<T> current = this.head;
     while (current != null) {
       if (current.getValue().equals(value)) {
