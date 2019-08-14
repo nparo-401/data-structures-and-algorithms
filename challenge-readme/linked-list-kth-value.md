@@ -17,7 +17,7 @@ Example: 1 -> 2 -> 3 -> 4 -> null ; value 1 from end ; return 3
 * Time and Space Efficiency
   * `kthFromEnd(int value)`
     * Time: O(n)
-    * Space: O(1)
+    * Space: O(n)
 
 ### Collaboration
 * Renee Messick
