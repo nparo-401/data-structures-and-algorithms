@@ -82,6 +82,7 @@ public class LinkedList<T> {
     current.setNext(newNode);
   }
 
+  @Override
   public String toString() {
     return setToString(this.head);
   }
