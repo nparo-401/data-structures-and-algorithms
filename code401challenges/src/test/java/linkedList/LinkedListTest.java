@@ -267,4 +267,68 @@ public class LinkedListTest {
         testLL.toString()
     );
   }
+
+  @Test
+  public void testKthFromEnd_IntegerInMiddleOfLinkedList() {
+    LinkedList<Integer> testLL = new LinkedList<>();
+    testLL.setHead(1);
+    testLL.append(2);
+    testLL.append(3);
+    testLL.append(4);
+    testLL.append(5);
+
+    assertEquals(
+        "testKthFromEnd_IntegerInMiddleOfLinkedList",
+        "2",
+        testLL.kthFromEnd(3)
+    );
+  }
+
+  @Test
+  public void testKthFromEnd_IntegerIsHeadOfLinkedList() {
+    LinkedList<Integer> testLL = new LinkedList<>();
+    testLL.setHead(1);
+    testLL.append(2);
+    testLL.append(3);
+    testLL.append(4);
+    testLL.append(5);
+
+    assertEquals(
+        "testKthFromEnd_IntegerIsHeadOfLinkedList",
+        "1",
+        testLL.kthFromEnd(4)
+    );
+  }
+
+  @Test
+  public void testKthFromEnd_IntegerIsLastElementOfLinkedList() {
+    LinkedList<Integer> testLL = new LinkedList<>();
+    testLL.setHead(1);
+    testLL.append(2);
+    testLL.append(3);
+    testLL.append(4);
+    testLL.append(5);
+
+    assertEquals(
+        "testKthFromEnd_IntegerIsHeadOfLinkedList",
+        "5",
+        testLL.kthFromEnd(0)
+    );
+  }
+
+  @Test
+  public void testKthFromEnd_IntegerIsLongerThanLinkedList() {
+    LinkedList<Integer> testLL = new LinkedList<>();
+    testLL.setHead(1);
+    testLL.append(2);
+    testLL.append(3);
+    testLL.append(4);
+    testLL.append(5);
+
+    assertEquals(
+        "testKthFromEnd_IntegerIsLongerThanLinkedList",
+        "Exception",
+        testLL.kthFromEnd(5)
+    );
+  }
 }
