@@ -5,8 +5,7 @@ public class DoublyLinkedList<T> {
   private Node<T> tail;
 
   public DoublyLinkedList() {
-    this.head = null;
-    this.tail = null;
+    this.head = this.tail = null;
   }
 
   public void setHead(T value) {
@@ -26,7 +25,7 @@ public class DoublyLinkedList<T> {
     return this.tail;
   }
 
-  public void insertBeforeHead(T value) {
+  public void prepend(T value) {
     Node<T> temp = this.head;
     Node<T> current = new Node<>(value, temp, null);
     if (this.head.getNext() == null) {
@@ -36,12 +35,13 @@ public class DoublyLinkedList<T> {
     this.head = current;
   }
 
-  public void insertAfterTail(T value) {
+  public void append(T value) {
     Node<T> temp = this.tail;
     this.tail = new Node<>(value, null, temp);
   }
 
-  public void insertBeforeFromHead(T valueToBeAdded, T valueToInsertBefore) {
+//  TODO: Finish
+  public void insertFromBeforeHead(T valueToBeAdded, T valueToInsertBefore) {
     Node<T> current = this.head;
     while (current != null) {
       if (current.getValue().equals(valueToInsertBefore)) {
@@ -50,7 +50,8 @@ public class DoublyLinkedList<T> {
     }
   }
 
-  public void insertAfterFromHead(T value) {
+//  TODO: Finish
+  public void insertFromAfterHead(T value) {
     Node<T> current = this.head;
   }
 
@@ -76,6 +77,7 @@ public class DoublyLinkedList<T> {
     return false;
   }
 
+  @Override
   public String toString() {
     StringBuilder response = new StringBuilder();
     Node<T> current = this.head;
