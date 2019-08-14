@@ -20,7 +20,7 @@ Example: 1 -> 2 -> 3 -> 4 -> null ; value 1 from end ; return 3
     * Space: O(1)
 
 ### Collaboration
-* Travis Cox
+* Renee Messick
 
 ### Solution
 ![append](../assets/linked-list-kth-value.jpg)
