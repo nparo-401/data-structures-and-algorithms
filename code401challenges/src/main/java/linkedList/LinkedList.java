@@ -1,5 +1,8 @@
 package linkedList;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LinkedList<T> {
   private Node<T> head;
 
@@ -80,6 +83,21 @@ public class LinkedList<T> {
     }
     Node<T> newNode = new Node<>(newValue, current.getNext());
     current.setNext(newNode);
+  }
+
+  public String kthFromEnd(int k) {
+    List<T> tempList = new ArrayList<>();
+    Node<T> current = this.head;
+    while (current != null) {
+      tempList.add(current.getValue());
+      current = current.getNext();
+    }
+    int checkIndex = tempList.size() - 1 - k;
+    if (checkIndex < 0) {
+      return "Exception";
+    } else {
+      return tempList.get(checkIndex).toString();
+    }
   }
 
   @Override
