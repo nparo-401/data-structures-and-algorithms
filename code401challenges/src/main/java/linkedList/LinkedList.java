@@ -100,12 +100,40 @@ public class LinkedList<T> {
     }
   }
 
+  public static LinkedList merge(LinkedList firstList, LinkedList secondList) {
+    if (firstList.getHead() == null) {
+      return secondList;
+    } else if (secondList.getHead() == null) {
+      return firstList;
+    } else {
+      Node currentFirst = firstList.getHead();
+      Node currentSecond = secondList.getHead();
+      while (currentFirst != null && currentSecond != null) {
+        if (currentSecond.getValue() == null) {
+          break;
+        } else if (currentFirst.getNext() == null && currentSecond.getValue() != null) {
+          currentFirst.setNext(currentSecond);
+          break;
+        } else {
+          Node tempFirst = currentFirst.getNext();
+          Node tempSecond = currentSecond.getNext();
+          currentSecond.setNext(tempSecond);
+          currentFirst.setNext(currentSecond);
+          currentFirst.getNext().setNext(tempFirst);
+          currentFirst = currentFirst.getNext().getNext();
+          currentSecond = tempSecond;
+        }
+      }
+      return firstList;
+    }
+  }
+
   @Override
   public String toString() {
     return setToString(this.head);
   }
 
-  private String setToString(Node<?> node) {
+  private String setToString(Node<T> node) {
     if (node == null) {
       return "null";
     }
