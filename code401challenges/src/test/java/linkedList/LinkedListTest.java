@@ -316,8 +316,8 @@ public class LinkedListTest {
     );
   }
 
-  @Test
-  public void testKthFromEnd_IntegerIsLongerThanLinkedList() {
+  @Test (expected = IndexOutOfBoundsException.class)
+  public void testKthFromEnd_IntegerIsLongerThanLinkedList()  {
     LinkedList<Integer> testLL = new LinkedList<>();
     testLL.setHead(1);
     testLL.append(2);
@@ -325,11 +325,7 @@ public class LinkedListTest {
     testLL.append(4);
     testLL.append(5);
 
-    assertEquals(
-        "testKthFromEnd_IntegerIsLongerThanLinkedList",
-        "Exception",
-        testLL.kthFromEnd(5)
-    );
+    testLL.kthFromEnd(6);
   }
 
   @Test

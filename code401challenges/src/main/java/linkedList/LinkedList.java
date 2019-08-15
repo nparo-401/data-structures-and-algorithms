@@ -94,7 +94,7 @@ public class LinkedList<T> {
     }
     int checkIndex = tempList.size() - 1 - k;
     if (checkIndex < 0) {
-      return "Exception";
+      throw new IndexOutOfBoundsException();
     } else {
       return tempList.get(checkIndex).toString();
     }
