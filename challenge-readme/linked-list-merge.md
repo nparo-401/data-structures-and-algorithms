@@ -11,7 +11,7 @@ Write a method which takes in two linked lists and zipper merges them into one l
 * Write a method called `merge` which takes in two linkedlists and does a zipper merge on them to create one linked list. The `merge` returns a reference to the head of the newly merged linked list - this will allow the new linked list to be referenced at a later time.
 
 ### Approach and Efficiency
-* The method `merge(LinkedList<T> firstList, LinkedList<T> secondList)`
+* The method `public static LinkedList merge(LinkedList firstList, LinkedList secondList)`
 * Time and Space Efficiency
   * `merge(int value)`
     * Time: O(n)
