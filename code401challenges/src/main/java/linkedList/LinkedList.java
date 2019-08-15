@@ -86,18 +86,21 @@ public class LinkedList<T> {
   }
 
   public String kthFromEnd(int k) {
-    List<T> tempList = new ArrayList<>();
+    int lenCount = 0;
     Node<T> current = this.head;
     while (current != null) {
-      tempList.add(current.getValue());
+      lenCount++;
       current = current.getNext();
     }
-    int checkIndex = tempList.size() - 1 - k;
-    if (checkIndex < 0) {
-      throw new IndexOutOfBoundsException();
-    } else {
-      return tempList.get(checkIndex).toString();
+
+    current = this.head;
+    for (int j = 1; j <= lenCount; j++) {
+      if (j == lenCount - k) {
+        return current.getValue().toString();
+      }
+      current = current.getNext();
     }
+    throw new IndexOutOfBoundsException();
   }
 
   public static <F> LinkedList<F> merge(LinkedList<F> firstList, LinkedList<F> secondList) {
