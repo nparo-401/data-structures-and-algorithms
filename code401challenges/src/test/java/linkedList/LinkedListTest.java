@@ -339,7 +339,7 @@ public class LinkedListTest {
     secondList.append(5);
     secondList.append(6);
 
-    LinkedList testList = LinkedList.merge(firstList, secondList);
+    LinkedList testList = LinkedList.mergeLists(firstList, secondList);
 
     assertEquals(
         "testMerge_EqualLengthLinkedLists should return: ",
@@ -358,7 +358,7 @@ public class LinkedListTest {
     secondList.append(5);
     secondList.append(6);
 
-    LinkedList testList = LinkedList.merge(firstList, secondList);
+    LinkedList testList = LinkedList.mergeLists(firstList, secondList);
 
     assertEquals(
         "testMerge_ShorterFirstLengthLinkedLists should return: ",
@@ -377,7 +377,7 @@ public class LinkedListTest {
     secondList.setHead(4);
     secondList.append(5);
 
-    LinkedList testList = LinkedList.merge(firstList, secondList);
+    LinkedList testList = LinkedList.mergeLists(firstList, secondList);
 
     assertEquals(
         "testMerge_ShorterSecondLengthLinkedLists should return: ",
@@ -394,7 +394,7 @@ public class LinkedListTest {
     secondList.append(5);
     secondList.append(6);
 
-    LinkedList testList = LinkedList.merge(firstList, secondList);
+    LinkedList testList = LinkedList.mergeLists(firstList, secondList);
 
     assertEquals(
         "testMerge_EmptyFirstLinkedLists should return: ",
@@ -411,7 +411,7 @@ public class LinkedListTest {
     firstList.append(2);
     firstList.append(3);
 
-    LinkedList testList = LinkedList.merge(firstList, secondList);
+    LinkedList testList = LinkedList.mergeLists(firstList, secondList);
 
     assertEquals(
         "testMerge_EmptySecondLinkedLists should return: ",
@@ -425,7 +425,7 @@ public class LinkedListTest {
     LinkedList<Integer> firstList = new LinkedList<>();
     LinkedList<Integer> secondList = new LinkedList<>();
 
-    LinkedList testList = LinkedList.merge(firstList, secondList);
+    LinkedList testList = LinkedList.mergeLists(firstList, secondList);
 
     assertEquals(
         "testMerge_EmptyBothLinkedLists should return: ",
