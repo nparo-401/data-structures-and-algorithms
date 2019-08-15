@@ -100,6 +100,23 @@ public class LinkedList<T> {
     throw new IndexOutOfBoundsException();
   }
 
+//  Recursive mergeLists
+  public static <F> LinkedList<F> mergeLists(LinkedList<F> list1, LinkedList<F> list2) {
+    LinkedList<F> answer = new LinkedList<>();
+    answer.head = mergeLists(list1.head, list2.head);
+    return answer;
+  }
+
+  private static <F> Node<F> mergeLists(Node<F> head1, Node<F> head2) {
+    if (head1 == null) {
+      return head2;
+    } else {
+      head1.setNext(mergeLists(head2, head1.getNext()));
+      return head1;
+    }
+  }
+
+//  Iterative mergeLists
   public static <F> LinkedList<F> merge(LinkedList<F> firstList, LinkedList<F> secondList) {
     if (firstList.getHead() == null) {
       return secondList;
