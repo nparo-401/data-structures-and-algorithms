@@ -14,7 +14,7 @@ public class LinkedList<T> {
     this.head = new Node<>(value, null);
   }
 
-  public Node getHead() {
+  public Node<T> getHead() {
     return this.head;
   }
 
@@ -100,12 +100,39 @@ public class LinkedList<T> {
     }
   }
 
+  public static <F> LinkedList<F> merge(LinkedList<F> firstList, LinkedList<F> secondList) {
+    if (firstList.getHead() == null) {
+      return secondList;
+    } else if (secondList.getHead() == null) {
+      return firstList;
+    } else {
+      Node<F> currentFirst = firstList.getHead();
+      Node<F> currentSecond = secondList.getHead();
+      while (currentFirst != null && currentSecond != null) {
+        if (currentSecond.getValue() == null) {
+          break;
+        } else if (currentFirst.getNext() == null && currentSecond.getValue() != null) {
+          currentFirst.setNext(currentSecond);
+          break;
+        } else {
+          Node<F> tempFirst = currentFirst.getNext();
+          Node<F> tempSecond = currentSecond.getNext();
+          currentFirst.setNext(currentSecond);
+          currentFirst.getNext().setNext(tempFirst);
+          currentFirst = currentFirst.getNext().getNext();
+          currentSecond = tempSecond;
+        }
+      }
+      return firstList;
+    }
+  }
+
   @Override
   public String toString() {
     return setToString(this.head);
   }
 
-  private String setToString(Node<?> node) {
+  private String setToString(Node<T> node) {
     if (node == null) {
       return "null";
     }

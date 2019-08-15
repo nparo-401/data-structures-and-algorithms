@@ -331,4 +331,110 @@ public class LinkedListTest {
         testLL.kthFromEnd(5)
     );
   }
+
+  @Test
+  public void testMerge_EqualLengthLinkedLists() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+    LinkedList<Integer> secondList = new LinkedList<>();
+    firstList.setHead(1);
+    firstList.append(2);
+    firstList.append(3);
+    secondList.setHead(4);
+    secondList.append(5);
+    secondList.append(6);
+
+    LinkedList testList = LinkedList.merge(firstList, secondList);
+
+    assertEquals(
+        "testMerge_EqualLengthLinkedLists should return: ",
+        "1 4 2 5 3 6 null",
+        testList.toString()
+    );
+  }
+
+  @Test
+  public void testMerge_ShorterFirstLengthLinkedLists() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+    LinkedList<Integer> secondList = new LinkedList<>();
+    firstList.setHead(1);
+    firstList.append(2);
+    secondList.setHead(4);
+    secondList.append(5);
+    secondList.append(6);
+
+    LinkedList testList = LinkedList.merge(firstList, secondList);
+
+    assertEquals(
+        "testMerge_ShorterFirstLengthLinkedLists should return: ",
+        "1 4 2 5 6 null",
+        testList.toString()
+    );
+  }
+
+  @Test
+  public void testMerge_ShorterSecondLengthLinkedLists() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+    LinkedList<Integer> secondList = new LinkedList<>();
+    firstList.setHead(1);
+    firstList.append(2);
+    firstList.append(3);
+    secondList.setHead(4);
+    secondList.append(5);
+
+    LinkedList testList = LinkedList.merge(firstList, secondList);
+
+    assertEquals(
+        "testMerge_ShorterSecondLengthLinkedLists should return: ",
+        "1 4 2 5 3 null",
+        testList.toString()
+    );
+  }
+
+  @Test
+  public void testMerge_EmptyFirstLinkedLists() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+    LinkedList<Integer> secondList = new LinkedList<>();
+    secondList.setHead(4);
+    secondList.append(5);
+    secondList.append(6);
+
+    LinkedList testList = LinkedList.merge(firstList, secondList);
+
+    assertEquals(
+        "testMerge_EmptyFirstLinkedLists should return: ",
+        "4 5 6 null",
+        testList.toString()
+    );
+  }
+
+  @Test
+  public void testMerge_EmptySecondLinkedLists() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+    LinkedList<Integer> secondList = new LinkedList<>();
+    firstList.setHead(1);
+    firstList.append(2);
+    firstList.append(3);
+
+    LinkedList testList = LinkedList.merge(firstList, secondList);
+
+    assertEquals(
+        "testMerge_EmptySecondLinkedLists should return: ",
+        "1 2 3 null",
+        testList.toString()
+    );
+  }
+
+  @Test
+  public void testMerge_EmptyBothLinkedLists() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+    LinkedList<Integer> secondList = new LinkedList<>();
+
+    LinkedList testList = LinkedList.merge(firstList, secondList);
+
+    assertEquals(
+        "testMerge_EmptyBothLinkedLists should return: ",
+        "null",
+        testList.toString()
+    );
+  }
 }
