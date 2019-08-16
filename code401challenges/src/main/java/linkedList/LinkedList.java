@@ -144,6 +144,34 @@ public class LinkedList<T> {
     }
   }
 
+  public LinkedList<T> reverse() {
+    Node<T> previous = null;
+    Node<T> current = this.head;
+    while (current != null) {
+      Node<T> temp = current.getNext();
+      current.setNext(previous);
+      previous = current;
+      current = temp;
+    }
+    this.head = previous;
+    return this;
+  }
+
+  public static <F> LinkedList<F> reverse(LinkedList<F> linkedList) {
+    Node<F> previous = null;
+    Node<F> current = linkedList.head;
+    while (current != null) {
+      Node<F> temp = current.getNext();
+      current.setNext(previous);
+      previous = current;
+      current = temp;
+    }
+    LinkedList<F> newLinkedList = new LinkedList<>();
+    newLinkedList.head = previous;
+
+    return newLinkedList;
+  }
+
   @Override
   public String toString() {
     return setToString(this.head);

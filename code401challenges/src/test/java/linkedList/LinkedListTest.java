@@ -418,6 +418,8 @@ public class LinkedListTest {
         "1 2 3 null",
         testList.toString()
     );
+
+
   }
 
   @Test
@@ -433,4 +435,56 @@ public class LinkedListTest {
         testList.toString()
     );
   }
+
+  @Test
+  public void testReverse_NonStatic() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+    firstList.setHead(1);
+    firstList.append(2);
+    firstList.append(3);
+
+    assertEquals(
+        "testReverse should return: ",
+        "3 2 1 null",
+        firstList.reverse().toString()
+    );
+  }
+
+  @Test
+  public void testReverse_NonStaticEmptyList() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+
+    assertEquals(
+        "testReverse should return: ",
+        "null",
+        firstList.reverse().toString()
+    );
+  }
+
+  @Test
+  public void testReverse_Static() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+    firstList.setHead(1);
+    firstList.append(2);
+    firstList.append(3);
+
+    assertEquals(
+        "testReverse should return: ",
+        "3 2 1 null",
+        LinkedList.reverse(firstList).toString()
+    );
+  }
+
+  @Test
+  public void testReverse_StaticEmptyList() {
+    LinkedList<Integer> firstList = new LinkedList<>();
+
+    assertEquals(
+        "testReverse should return: ",
+        "null",
+        LinkedList.reverse(firstList).toString()
+    );
+  }
+
+
 }
