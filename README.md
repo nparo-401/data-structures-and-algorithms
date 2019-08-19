@@ -1,7 +1,6 @@
 # Data Structures and Algorithms
 
 ## Table of Contents
-
 #### Code Challenges
 1. [Reverse an Array](challenge-readme/reverse-an-array.md)
 2. [Insert Shift Array](challenge-readme/insert-shift-array.md)
@@ -12,3 +11,4 @@
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
+2. [Stacks and Queues](challenge-readme/stacks-and-queues.md)
