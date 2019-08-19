@@ -1,4 +1,4 @@
-## Singly Linked List
+## Stacks and Queues
 
 ### Challenge
 Create a class `Stack` with an empty value assigned to `top` and define a method for `push`, `pop`, and `peek`.
