@@ -2,8 +2,6 @@ package stacksAndQueues;
 
 import org.junit.Test;
 
-import java.util.NoSuchElementException;
-
 import static org.junit.Assert.*;
 
 public class StackTest {
@@ -69,7 +67,7 @@ public class StackTest {
 
     assertEquals(
         "testPush_MultipleValues should return: ",
-        "1 -> null",
+        "top -> 1 -> null",
         stack.toString()
     );
   }
@@ -84,7 +82,7 @@ public class StackTest {
 
     assertEquals(
         "testPush_MultipleValues should return: ",
-        "1 -> 3 -> 2 -> 1 -> null",
+        "top -> 1 -> 3 -> 2 -> 1 -> null",
         stack.toString()
     );
   }
@@ -119,7 +117,7 @@ public class StackTest {
   @Test (expected = NullPointerException.class)
   public void testPop_NoValuesInStack() {
     Stack<Integer> stack = new Stack<>();
-    int first = stack.pop();
+    stack.pop();
   }
 
   @Test

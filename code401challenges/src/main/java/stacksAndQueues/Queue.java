@@ -9,14 +9,6 @@ public class Queue<T> {
     return this.length;
   }
 
-  public Node<T> getFront() {
-    return this.front;
-  }
-
-  public Node<T> getBack() {
-    return this.back;
-  }
-
   public void enqueue(T value) {
     Node<T> newNode = new Node<>();
     newNode.value = value;
@@ -32,15 +24,12 @@ public class Queue<T> {
   }
 
   public T dequeue() {
-    if (this.front == null) {
-      throw new NullPointerException();
-    }
+    T frontValue = peek();
 
     if (this.front == this.back) {
       this.back = null;
     }
 
-    T frontValue = this.front.value;
     this.front = this.front.next;
     this.length--;
     return frontValue;
@@ -50,17 +39,18 @@ public class Queue<T> {
     if (this.front == null) {
       throw new NullPointerException();
     }
+
     return this.front.value;
   }
 
   @Override
   public String toString() {
-    return setToString(this.front) ;
+    return "front -> " + setToString(this.front) ;
   }
 
   private String setToString(Node<T> node) {
     if (node == null) {
-      return "null";
+      return "back";
     }
     return node.value + " -> " + setToString(node.next);
   }

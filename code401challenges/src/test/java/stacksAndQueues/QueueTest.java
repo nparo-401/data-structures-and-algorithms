@@ -67,7 +67,7 @@ public class QueueTest {
 
     assertEquals(
         "testEnqueue_AddOneValue should return: ",
-        "1 -> null",
+        "front -> 1 -> back",
         queue.toString()
     );
   }
@@ -82,7 +82,7 @@ public class QueueTest {
 
     assertEquals(
         "testEnqueue_AddMultipleValues should return: ",
-        "1 -> 2 -> 3 -> 4 -> null",
+        "front -> 1 -> 2 -> 3 -> 4 -> back",
         queue.toString()
     );
   }
@@ -125,9 +125,9 @@ public class QueueTest {
     Queue<Integer> queue = new Queue<>();
     queue.enqueue(1);
     queue.enqueue(2);
-    int dequeueFirst = queue.dequeue();
-    int dequeueSecond = queue.dequeue();
-    int dequeueThird = queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
   }
 
   @Test
