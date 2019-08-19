@@ -15,7 +15,7 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
 * src/main/stacksAndQueues
   * [Node.java](../code401challenges/src/main/java/stacksAndQueues/Node.java)
   * [Stack.java](../code401challenges/src/main/java/stacksAndQueues/Stack.java)
-  * [Queue.java](../code401challenges/src/main/java/stacksAndQueues.Queue.java)
+  * [Queue.java](../code401challenges/src/main/java/stacksAndQueues/Queue.java)
 * src/test/stacksAndQueues
   * [NodeTest.java](../code401challenges/src/test/java/stacksAndQueues/NodeTest.java)
   * [StackTest.java](../code401challenges/src/test/java/stacksAndQueues/StackTest.java)
