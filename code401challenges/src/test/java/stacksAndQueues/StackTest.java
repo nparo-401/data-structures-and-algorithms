@@ -8,6 +8,61 @@ import static org.junit.Assert.*;
 
 public class StackTest {
   @Test
+  public void testLength_EmptyStack() {
+    Stack<Integer> stack = new Stack<>();
+
+    assertEquals(
+        "testLength_EmptyStack should return: ",
+        0,
+        stack.length()
+    );
+  }
+
+  @Test
+  public void testLength_OneValueStack() {
+    Stack<Integer> stack = new Stack<>();
+    stack.push(1);
+
+    assertEquals(
+        "testLength_OneValueStack should return: ",
+        1,
+        stack.length()
+    );
+  }
+
+  @Test
+  public void testLength_MultipleValueStack() {
+    Stack<Integer> stack = new Stack<>();
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    stack.push(4);
+
+    assertEquals(
+        "testLength_MultipleValueStack should return: ",
+        4,
+        stack.length()
+    );
+  }
+
+  @Test
+  public void testLength_MultipleValueStackWithPushAndPop() {
+    Stack<Integer> stack = new Stack<>();
+    stack.push(1);
+    stack.pop();
+    stack.push(2);
+    stack.push(3);
+    stack.pop();
+    stack.push(4);
+
+    assertEquals(
+        "testLength_MultipleValuesStackWithPushAndPop should return: ",
+        2,
+        stack.length()
+    );
+  }
+
+  @Test
   public void testPush_OneValue() {
     Stack<Integer> stack = new Stack<>();
     stack.push(1);

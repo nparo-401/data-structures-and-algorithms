@@ -2,12 +2,22 @@ package stacksAndQueues;
 
 public class Stack<T> {
   private Node<T> top;
+  private int length = 0;
 
-  void push(T value) {
+  public int length() {
+    return this.length;
+  }
+
+  public Node<T> getTop() {
+    return this.top;
+  }
+
+  public void push(T value) {
     Node<T> newNode = new Node<>();
     newNode.value = value;
     newNode.next = this.top;
     top = newNode;
+    this.length++;
   }
 
   public T pop() {
@@ -17,6 +27,7 @@ public class Stack<T> {
     Node<T> poppedNode = this.top;
     this.top = poppedNode.next;
     poppedNode.next = null;
+    this.length--;
     return poppedNode.value;
   }
 
