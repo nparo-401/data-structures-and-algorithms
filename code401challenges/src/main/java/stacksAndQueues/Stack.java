@@ -8,10 +8,6 @@ public class Stack<T> {
     return this.length;
   }
 
-  public Node<T> getTop() {
-    return this.top;
-  }
-
   public void push(T value) {
     Node<T> newNode = new Node<>();
     newNode.value = value;
@@ -24,6 +20,7 @@ public class Stack<T> {
     if (top.value == null) {
       throw new NullPointerException();
     }
+
     Node<T> poppedNode = this.top;
     this.top = poppedNode.next;
     poppedNode.next = null;
@@ -35,18 +32,20 @@ public class Stack<T> {
     if (top.value == null) {
       throw new NullPointerException();
     }
+
     return top.value;
   }
 
   @Override
   public String toString() {
-    return setToString(this.top) ;
+    return "top -> " + setToString(this.top) ;
   }
 
   private String setToString(Node<T> node) {
     if (node == null) {
       return "null";
     }
+
     return node.value + " -> " + setToString(node.next);
   }
 }
