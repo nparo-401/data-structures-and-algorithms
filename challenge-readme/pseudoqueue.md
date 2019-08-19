@@ -4,11 +4,11 @@ Create a class which uses two stacks and acts the same as the Class `Queue`.
 ### Links
 * src/main/stacksAndQueues
   * [Node.java](../code401challenges/src/main/java/stacksAndQueues/Node.java)
-  * [Pseudoqueue.java](../code401challenges/src/main/java/stacksAndQueues/Pseudoqueue.java)
+  * [PseudoQueue.java](../code401challenges/src/main/java/stacksAndQueues/PseudoQueue.java)
   * [Stack.java](../code401challenges/src/main/java/stacksAndQueues/Stack.java)
   * [Queue.java](../code401challenges/src/main/java/stacksAndQueues/Queue.java)
 * src/test/stacksAndQueues
-  * [PseudoqueueTest.java](../code401challenges/src/test/java/stacksAndQueues/PseudoqueueTest.java)
+  * [PseudoQueueTest.java](../code401challenges/src/test/java/stacksAndQueues/PseudoQueueTest.java)
   * [StackTest.java](../code401challenges/src/test/java/stacksAndQueues/StackTest.java)
   * [QueueTest.java](../code401challenges/src/test/java/stacksAndQueues/QueueTest.java)
 
