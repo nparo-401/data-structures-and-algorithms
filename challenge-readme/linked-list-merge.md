@@ -1,7 +1,6 @@
 ## Linked List Insertions
 Write a method which takes in two linked lists and zipper merges them into one list.
 
-
 ### Links
 * [LinkedList.java](../code401challenges/src/main/java/linkedList/LinkedList.java) 
 * [Node.java](../code401challenges/src/main/java/linkedList/Node.java)
