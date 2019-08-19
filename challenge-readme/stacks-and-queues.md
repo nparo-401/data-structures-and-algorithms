@@ -36,10 +36,10 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
       * S: O(1)
     * `toString()`
       * T: O(n)
-      * S: O(1)
+      * S: O(n)
     * `setToString()`
       * T: O(n)
-      * S: O(1)
+      * S: O(n)
   * Queue:
     * `enqueue(T value)`
       * T: O(1)
@@ -52,10 +52,10 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
       * S: O(1)
     * `toString()`
       * T: O(n)
-      * S: O(1)
+      * S: O(n)
     * `setToString()`
       * T: O(n)
-      * S: O(1)
+      * S: O(n)
 
 
 ### API
