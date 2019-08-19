@@ -5,6 +5,60 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class QueueTest {
+  @Test
+  public void testLength_EmptyQueue() {
+    Queue<Integer> queue = new Queue<>();
+
+    assertEquals(
+        "testLength_EmptyQueue should return: ",
+        0,
+        queue.length()
+    );
+  }
+
+  @Test
+  public void testLength_OneValueQueue() {
+    Queue<Integer> queue = new Queue<>();
+    queue.enqueue(1);
+
+    assertEquals(
+        "testLength_OneValueQueue should return: ",
+        1,
+        queue.length()
+    );
+  }
+
+  @Test
+  public void testLength_MultipleValueQueue() {
+    Queue<Integer> queue = new Queue<>();
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    queue.enqueue(4);
+
+    assertEquals(
+        "testLength_MultipleValueQueue should return: ",
+        4,
+        queue.length()
+    );
+  }
+
+  @Test
+  public void testLength_MultipleValueQueueWithPushAndPop() {
+    Queue<Integer> queue = new Queue<>();
+    queue.enqueue(1);
+    queue.dequeue();
+    queue.enqueue(2);
+    queue.enqueue(3);
+    queue.dequeue();
+    queue.enqueue(4);
+
+    assertEquals(
+        "testLength_MultipleValuesQueueWithPushAndPop should return: ",
+        2,
+        queue.length()
+    );
+  }
 
   @Test
   public void testEnqueue_AddOneValue() {

@@ -25,6 +25,9 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
 * Approach: Create a test driven Class which follows best practices and has optimized time and space.
 * Time and Space:
   * Stack:
+    * `length()`
+      * T: O(1)
+      * S: O(1)
     * `push(T value)`
       * T: O(1)
       * S: O(1)
@@ -41,6 +44,9 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
       * T: O(n)
       * S: O(n)
   * Queue:
+    * `length()`
+      * T: O(1)
+      * S: O(1)
     * `enqueue(T value)`
       * T: O(1)
       * S: O(1)
@@ -56,7 +62,6 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
     * `setToString()`
       * T: O(n)
       * S: O(n)
-
 
 ### API
 * **Node<T>**
@@ -78,13 +83,18 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
 * **Stack<T>**
   * Variables:
     * `Node<T> top`
+    * `int length`
   * Methods:
-    * `push(T value)`
+    * `public int length()`
+      * returns the length of the stack.
+    * `public Node<T> getTop()`
+      * returns the Node assigned to `top`.
+    * `public void push(T value)`
       * adds a new node to the top of the stack and reassigns the next value to the previous top.
-    * `pop()`
+    * `public T pop()`
       * removes the node from the top of the stack and reassigns the top to the next node.
       * returns the value of the node being removed from the stack.
-    * `peek()`
+    * `public T peek()`
       * returns the value of the node from the top of the stack and does nothing else to it.
     * `public String toString()`
       * returns `setToString(this.top)`.
@@ -95,15 +105,22 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
   * Variables:
     * `Node<T> front`
     * `Node<T> back`
+    * `int length`
   * Methods:
-    * `enqueue(T value)`
+    * `public int length()`
+      * returns the length of the queue.
+    * `public Node<T> getFront()`
+      * returns the Node assigned to `front`.
+    * `public Node<T> getBack()`
+      * returns the Node assigned to `back`.
+    * `public void enqueue(T value)`
       * adds a new node to the back of the queue.
-    * `dequeue()`
+    * `public T dequeue()`
       * removes the node from the front of the queue and reassigns the front to the previous fronts next.
       * returns the value of the node being removed from the front of the queue.
-    * `peek()`
+    * `public T peek()`
       * returns the value from the front of the queue and does nothing else to it.
     * `public String toString()`
-      * returns `setToString(this.top)`.
+      * returns `setToString(this.front)`.
     * `private String setToString(Node<T> node)`
       * performs a recursive call on node and prints a string version of the values at each node from the front of the queue to the back.

@@ -3,6 +3,11 @@ package stacksAndQueues;
 public class Queue<T> {
   private Node<T> front;
   private Node<T> back;
+  private int length = 0;
+
+  public int length() {
+    return this.length;
+  }
 
   public Node<T> getFront() {
     return this.front;
@@ -15,15 +20,15 @@ public class Queue<T> {
   public void enqueue(T value) {
     Node<T> newNode = new Node<>();
     newNode.value = value;
+    this.length++;
 
     if (front == null) {
       this.front = newNode;
       this.back = newNode;
-      return;
+    } else {
+      this.back.next = newNode;
+      this.back = newNode;
     }
-
-    this.back.next = newNode;
-    this.back = newNode;
   }
 
   public T dequeue() {
@@ -37,6 +42,7 @@ public class Queue<T> {
 
     T frontValue = this.front.value;
     this.front = this.front.next;
+    this.length--;
     return frontValue;
   }
 

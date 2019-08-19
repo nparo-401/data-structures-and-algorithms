@@ -21,6 +21,6 @@ public class Node<T> {
   }
 
   public String toString() {
-    return (String)this.value;
+    return String.valueOf(this.value);
   }
 }
