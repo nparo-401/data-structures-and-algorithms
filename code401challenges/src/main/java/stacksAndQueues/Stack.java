@@ -9,10 +9,7 @@ public class Stack<T> {
   }
 
   public void push(T value) {
-    Node<T> newNode = new Node<>();
-    newNode.value = value;
-    newNode.next = this.top;
-    top = newNode;
+    this.top = new Node<>(value, this.top);
     this.length++;
   }
 
@@ -34,6 +31,10 @@ public class Stack<T> {
     }
 
     return top.value;
+  }
+
+  public boolean isEmpty() {
+    return this.top == null;
   }
 
   @Override

@@ -10,8 +10,7 @@ public class Queue<T> {
   }
 
   public void enqueue(T value) {
-    Node<T> newNode = new Node<>();
-    newNode.value = value;
+    Node<T> newNode = new Node<>(value);
     this.length++;
 
     if (front == null) {
@@ -41,6 +40,10 @@ public class Queue<T> {
     }
 
     return this.front.value;
+  }
+
+  public boolean isEmpty() {
+    return this.front == null;
   }
 
   @Override

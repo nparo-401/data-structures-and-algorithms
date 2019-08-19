@@ -160,4 +160,23 @@ public class QueueTest {
     Queue<Integer> queue = new Queue<>();
     queue.peek();
   }
+
+  @Test
+  public void testIsEmpty_EmptyQueue() {
+    Queue<Integer> queue = new Queue<>();
+    assertTrue(
+        "testIsEmpty_EmptyQueue should return true",
+        queue.isEmpty()
+    );
+  }
+
+  @Test
+  public void testIsEmpty_NotEmptyQueue() {
+    Queue<Integer> queue = new Queue<>();
+    queue.enqueue(1);
+    assertFalse(
+        "testIsEmpty_NotEmptyQueue should return false",
+        queue.isEmpty()
+    );
+  }
 }
