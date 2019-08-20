@@ -46,8 +46,15 @@ Create a class `Pseudoqueue` which utilizes two stacks and has the methods `enqu
   * `private String setToString(Node<T> node)`
     * recursively builds a string response
 * Time and Space:
-  * T: O()
-  * S: O()
+  * `enqueue(T value)`
+    * T: O(1)
+    * S: O(1)
+  * `dequeue()`
+    * T: O(n)
+    * S: O(1)
+  * `looper(Stack<T> stackToPopFrom, Stack<T> stackToPushInto)`
+    * T: O(n)
+    * S: O(1)
 
 ### Collaboration
 * Not at this time
