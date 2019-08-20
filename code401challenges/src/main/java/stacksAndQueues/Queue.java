@@ -1,5 +1,7 @@
 package stacksAndQueues;
 
+import java.util.NoSuchElementException;
+
 public class Queue<T> {
   private Node<T> front;
   private Node<T> back;
@@ -35,8 +37,8 @@ public class Queue<T> {
   }
 
   public T peek() {
-    if (this.front == null) {
-      throw new NullPointerException();
+    if (this.isEmpty()) {
+      throw new NoSuchElementException();
     }
 
     return this.front.value;

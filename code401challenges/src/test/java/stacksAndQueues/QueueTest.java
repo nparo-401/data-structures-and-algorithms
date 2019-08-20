@@ -2,6 +2,8 @@ package stacksAndQueues;
 
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.Assert.*;
 
 public class QueueTest {
@@ -87,7 +89,7 @@ public class QueueTest {
     );
   }
 
-  @Test (expected = NullPointerException.class)
+  @Test (expected = NoSuchElementException.class)
   public void testDequeue_RemoveFromEmpty() {
     Queue<Integer> queue = new Queue<>();
     queue.dequeue();
@@ -120,7 +122,7 @@ public class QueueTest {
     );
   }
 
-  @Test (expected = NullPointerException.class)
+  @Test (expected = NoSuchElementException.class)
   public void testDequeue_RemoveTooManyValues() {
     Queue<Integer> queue = new Queue<>();
     queue.enqueue(1);
@@ -155,7 +157,7 @@ public class QueueTest {
     );
   }
 
-  @Test (expected = NullPointerException.class)
+  @Test (expected = NoSuchElementException.class)
   public void testPeek_NoValuesInQueue() {
     Queue<Integer> queue = new Queue<>();
     queue.peek();
