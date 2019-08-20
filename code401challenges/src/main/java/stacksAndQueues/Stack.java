@@ -1,24 +1,27 @@
 package stacksAndQueues;
 
+import java.util.NoSuchElementException;
+
 public class Stack<T> {
   private Node<T> top;
   private int length = 0;
+
+  public Node<T> getTop() {
+    return this.top;
+  }
 
   public int length() {
     return this.length;
   }
 
   public void push(T value) {
-    Node<T> newNode = new Node<>();
-    newNode.value = value;
-    newNode.next = this.top;
-    top = newNode;
+    this.top = new Node<>(value, this.top);
     this.length++;
   }
 
   public T pop() {
-    if (top.value == null) {
-      throw new NullPointerException();
+    if (this.isEmpty()) {
+      throw new NoSuchElementException();
     }
 
     Node<T> poppedNode = this.top;
@@ -29,11 +32,15 @@ public class Stack<T> {
   }
 
   public T peek() {
-    if (top.value == null) {
-      throw new NullPointerException();
+    if (this.isEmpty()) {
+      throw new NoSuchElementException();
     }
 
     return top.value;
+  }
+
+  public boolean isEmpty() {
+    return this.top == null;
   }
 
   @Override

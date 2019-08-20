@@ -2,6 +2,8 @@ package stacksAndQueues;
 
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.Assert.*;
 
 public class StackTest {
@@ -114,7 +116,7 @@ public class StackTest {
     );
   }
 
-  @Test (expected = NullPointerException.class)
+  @Test (expected = NoSuchElementException.class)
   public void testPop_NoValuesInStack() {
     Stack<Integer> stack = new Stack<>();
     stack.pop();
@@ -144,9 +146,29 @@ public class StackTest {
     );
   }
 
-  @Test (expected = NullPointerException.class)
+  @Test (expected = NoSuchElementException.class)
   public void testPeek_NoValuesInStack() {
     Stack<Integer> stack = new Stack<>();
     stack.peek();
+  }
+
+  @Test
+  public void testIsEmpty_EmptyStack() {
+    Stack<Integer> stack = new Stack<>();
+
+    assertTrue(
+        "testIsEmpty_EmptyStack should return true",
+        stack.isEmpty()
+    );
+  }
+
+  @Test
+  public void testIsEmpty_NotEmptyStack() {
+    Stack<Integer> stack = new Stack<>();
+    stack.push(1);
+
+    assertFalse(
+        "testIsEmpty_NotEmptyStack should return false",
+        stack.isEmpty());
   }
 }

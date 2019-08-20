@@ -36,6 +36,9 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
     * `peek()`
       * T: O(1)
       * S: O(1)
+    * `isEmpty()`
+      * T: O(1)
+      * S: O(1)
     * `toString()`
       * T: O(n)
       * S: O(n)
@@ -53,6 +56,9 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
       * T: O(1)
       * S: O(1)
     * `peek()`
+      * T: O(1)
+      * S: O(1)
+    * `isEmpty()`
       * T: O(1)
       * S: O(1)
     * `toString()`
@@ -85,6 +91,8 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
       * returns the value of the node being removed from the stack.
     * `public T peek()`
       * returns the value of the node from the top of the stack and does nothing else to it.
+    * `public boolean isEmpty()`
+      * returns true if stack is empty and false if stack is not empty.
     * `public String toString()`
       * returns `setToString(this.top)`.
     * `private String setToString(Node<T> node)`
@@ -106,6 +114,8 @@ Create a class `Queue` with an empty value assigned to `front` and `back` and de
       * returns the value of the node being removed from the front of the queue.
     * `public T peek()`
       * returns the value from the front of the queue and does nothing else to it.
+    * `public boolean isEmpty()`
+      * returns true if queue is empty and false if queue is not empty.
     * `public String toString()`
       * returns `setToString(this.front)`.
     * `private String setToString(Node<T> node)`
