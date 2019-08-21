@@ -6,6 +6,10 @@ public class LinkedList<T> {
   public LinkedList() {
     this.head = null;
   }
+  
+  public boolean isEmpty() {
+    return this.head == null;
+  }
 
   public void setHead(T value) {
     this.head = new Node<>(value, null);

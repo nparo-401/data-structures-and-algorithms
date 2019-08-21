@@ -9,6 +9,7 @@
 5. [Linked List Kth Value From End](challenge-readme/linked-list-kth-value.md)
 6. [Linked List Merge](challenge-readme/linked-list-merge.md)
 7. [Stacks and Queues Pseudoqueue](challenge-readme/pseudoqueue.md)
+8. [Animal Shelter](challenge-readme/animal-shelter.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)

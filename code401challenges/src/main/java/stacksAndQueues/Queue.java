@@ -39,9 +39,9 @@ public class Queue<T> {
   public T peek() {
     if (this.isEmpty()) {
       throw new NoSuchElementException();
+    } else {
+      return this.front.value;
     }
-
-    return this.front.value;
   }
 
   public boolean isEmpty() {
@@ -56,7 +56,8 @@ public class Queue<T> {
   private String setToString(Node<T> node) {
     if (node == null) {
       return "back";
+    } else {
+      return node.value + " -> " + setToString(node.next);
     }
-    return node.value + " -> " + setToString(node.next);
   }
 }

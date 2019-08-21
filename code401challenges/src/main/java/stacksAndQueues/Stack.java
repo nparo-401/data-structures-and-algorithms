@@ -22,21 +22,21 @@ public class Stack<T> {
   public T pop() {
     if (this.isEmpty()) {
       throw new NoSuchElementException();
+    } else {
+      Node<T> poppedNode = this.top;
+      this.top = poppedNode.next;
+      poppedNode.next = null;
+      this.length--;
+      return poppedNode.value;
     }
-
-    Node<T> poppedNode = this.top;
-    this.top = poppedNode.next;
-    poppedNode.next = null;
-    this.length--;
-    return poppedNode.value;
   }
 
   public T peek() {
     if (this.isEmpty()) {
       throw new NoSuchElementException();
+    } else {
+      return top.value;
     }
-
-    return top.value;
   }
 
   public boolean isEmpty() {
@@ -51,8 +51,8 @@ public class Stack<T> {
   private String setToString(Node<T> node) {
     if (node == null) {
       return "null";
+    } else {
+      return node.value + " -> " + setToString(node.next);
     }
-
-    return node.value + " -> " + setToString(node.next);
   }
 }
