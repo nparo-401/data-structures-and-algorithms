@@ -8,6 +8,7 @@ Create an Animal Shelter class which holds only dogs and cats and is first-in-fi
   * [Cat.java](../code401challenges/src/main/java/utilities/Cat.java)
   * [Dog.java](../code401challenges/src/main/java/utilities/Dog.java)
 * src/test/utilities
+  * [NonAdoptableAnimal.java](../code401challenges/src/main/java/utilities/NonAdoptableAnimal.java)
   * [AnimalShelterTest.java](../code401challenges/src/test/java/utilities/AnimalShelterTest.java)
 
 ### Challenge

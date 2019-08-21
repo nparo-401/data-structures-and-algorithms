@@ -23,13 +23,13 @@ public class AnimalShelter {
     }
   }
   
-  public AdoptableAnimal dequeue(String animalPreference) {
-    if (animalPreference.toLowerCase().trim().equals("cat")) {
+  public <X> AdoptableAnimal dequeue(Class<X> animalPreference) {
+    if (animalPreference.equals(Cat.class)) {
       return this.catQueue.dequeue();
-    } else if (animalPreference.toLowerCase().trim().equals("dog")) {
+    } else if (animalPreference.equals(Dog.class)) {
       return this.dogQueue.dequeue();
     } else {
-      return null;
+      throw new IllegalArgumentException("That animal type is not supported in this shelter");
     }
   }
   
