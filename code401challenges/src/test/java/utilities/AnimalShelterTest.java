@@ -124,7 +124,7 @@ public class AnimalShelterTest {
     Dog testDog = new Dog("Fido", "Black Lab", 3);
     AnimalShelter shelter = new AnimalShelter();
     shelter.enqueue(testDog);
-    AdoptableAnimal responseDog = shelter.dequeue("dog");
+    AdoptableAnimal responseDog = shelter.dequeue(Dog.class);
   
     assertEquals(
      "testDequeue_OneDogInOneDogOut_NoMedical should return: ",
@@ -137,6 +137,12 @@ public class AnimalShelterTest {
     assertTrue(shelter.isEmpty());
   }
   
+  @Test (expected = IllegalArgumentException.class)
+  public void testDequeue_NotADogOrCat() {
+    AnimalShelter shelter = new AnimalShelter();
+    shelter.dequeue(NonAdoptableAnimal.class);
+  }
+  
   @Test
   public void testDequeue_OneDogInOneDogOut_YesMedical() {
     Dog testDog = new Dog("Fido", "Black Lab", 3);
@@ -144,7 +150,7 @@ public class AnimalShelterTest {
     testDog.setMedicalConcerns("allergies");
     AnimalShelter shelter = new AnimalShelter();
     shelter.enqueue(testDog);
-    AdoptableAnimal responseDog = shelter.dequeue("dog");
+    AdoptableAnimal responseDog = shelter.dequeue(Dog.class);
     
     assertEquals(
      "testDequeue_OneDogInOneDogOut_YesMedical should return: ",
@@ -162,8 +168,8 @@ public class AnimalShelterTest {
     Dog testDog = new Dog("Fido", "Black Lab", 3);
     AnimalShelter shelter = new AnimalShelter();
     shelter.enqueue(testDog);
-    AdoptableAnimal responseDog = shelter.dequeue("dog");
-    AdoptableAnimal responseDog2 = shelter.dequeue("dog");
+    shelter.dequeue(Dog.class);
+    shelter.dequeue(Dog.class);
   }
   
   @Test
@@ -173,7 +179,7 @@ public class AnimalShelterTest {
     AnimalShelter shelter = new AnimalShelter();
     shelter.enqueue(testDog);
     shelter.enqueue(testCat);
-    AdoptableAnimal responseDog = shelter.dequeue("dog");
+    AdoptableAnimal responseDog = shelter.dequeue(Dog.class);
     
     assertEquals(
      "testDequeue_OneDogAndOneCatInOneDogOut_NoMedical should return: ",
@@ -193,8 +199,8 @@ public class AnimalShelterTest {
     AnimalShelter shelter = new AnimalShelter();
     shelter.enqueue(testDog);
     shelter.enqueue(testCat);
-    AdoptableAnimal responseDog = shelter.dequeue("dog");
-    AdoptableAnimal responseCat = shelter.dequeue("cat");
+    AdoptableAnimal responseDog = shelter.dequeue(Dog.class);
+    AdoptableAnimal responseCat = shelter.dequeue(Cat.class);
     
     assertEquals(
      "testDequeue_OneDogAndOneCatInOneDogOut_NoMedical should return: ",
