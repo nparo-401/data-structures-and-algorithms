@@ -1,4 +1,4 @@
-## Pseudoqueue
+## Animal Shelter
 Create an Animal Shelter class which holds only dogs and cats and is first-in-first-out.
 
 ### Links
