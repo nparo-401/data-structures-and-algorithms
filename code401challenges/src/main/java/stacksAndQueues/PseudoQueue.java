@@ -53,7 +53,8 @@ public class PseudoQueue<T> {
   private String setToString(Node<T> node) {
     if (node == null) {
       return "back";
+    } else {
+      return node.value + " -> " + setToString(node.next);
     }
-    return node.value + " -> " + setToString(node.next);
   }
 }
