@@ -16,7 +16,15 @@ Create a method `multiBracketValidation(String input)` which takes in a string v
   * if stack is empty return true, else return false;
 * Method:
   * `public static boolean multiBracketValidation(String input)`
-    * 
+    * creates an empty stack for opening brackets
+    * splits the string into a char array
+    * uses a for loop go through the entire char array
+      * pushes opening brackets into the stack
+      * checks if the chars match the peek value of the stack
+        * if not return false
+        * if true pop from the stack
+    * return `stack.isEmpty()` - this validates if any chars are left in the stack.
+
 * Time and Space:
   * `multiBracketValidation(String input)`
     * T: O(n)
