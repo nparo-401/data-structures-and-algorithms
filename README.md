@@ -10,6 +10,7 @@
 6. [Linked List Merge](challenge-readme/linked-list-merge.md)
 7. [Stacks and Queues Pseudoqueue](challenge-readme/pseudoqueue.md)
 8. [Animal Shelter](challenge-readme/animal-shelter.md)
+9. [Multi Bracket Validation](challenge-readme/multi-bracket.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
