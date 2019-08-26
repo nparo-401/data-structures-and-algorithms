@@ -15,3 +15,4 @@
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
 2. [Stacks and Queues](challenge-readme/stacks-and-queues.md)
+3. [Tree and Binary Search Tree](challenge-readme/tree-bst.md)
