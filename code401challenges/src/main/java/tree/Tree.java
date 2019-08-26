@@ -14,8 +14,8 @@ public class Tree<T> {
   public boolean isEmpty() {
     return this.root == null;
   }
-  
-  public List<T> preOrder() {
+    
+    public List<T> preOrder() {
     if (isEmpty()) {
       throw new NoSuchElementException();
     }

@@ -18,7 +18,7 @@ public class TreeTest {
   
   @Test
   public void testIsEmpty_OneVal() {
-    BinarySearchTree tree = new BinarySearchTree();
+    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
     tree.add(4);
 
     assertFalse("isEmpty_OneVal should return false", tree.isEmpty());
@@ -26,7 +26,7 @@ public class TreeTest {
 
   @Test
   public void testIsEmpty_MultipleOperations() {
-    BinarySearchTree tree = new BinarySearchTree();
+    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
     assertTrue(tree.isEmpty());
     tree.add(4);
     assertFalse(tree.isEmpty());
@@ -36,7 +36,7 @@ public class TreeTest {
   
   @Test (expected = NoSuchElementException.class)
   public void testPreOrder_EmptyTree() {
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.preOrder();
   }
   
@@ -45,7 +45,7 @@ public class TreeTest {
     List<Integer> testList = new ArrayList<>();
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     
     for (int i = 0; i < binarySearchTree.preOrder().size(); i++) {
@@ -63,7 +63,7 @@ public class TreeTest {
     testList.add(4);
     testList.add(2);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     
@@ -82,7 +82,7 @@ public class TreeTest {
     testList.add(4);
     testList.add(6);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(6);
     
@@ -102,7 +102,7 @@ public class TreeTest {
     testList.add(2);
     testList.add(5);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(5);
@@ -123,7 +123,7 @@ public class TreeTest {
     testList.add(6);
     testList.add(5);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(6);
@@ -145,7 +145,7 @@ public class TreeTest {
     testList.add(3);
     testList.add(5);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(3);
@@ -172,7 +172,7 @@ public class TreeTest {
     testList.add(12);
     testList.add(29);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(6);
@@ -194,7 +194,7 @@ public class TreeTest {
   
   @Test (expected = NoSuchElementException.class)
   public void testInOrder_EmptyTree() {
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.inOrder();
   }
   
@@ -203,7 +203,7 @@ public class TreeTest {
     List<Integer> testList = new ArrayList<>();
     testList.add(4);
   
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
   
     for (int i = 0; i < binarySearchTree.inOrder().size(); i++) {
@@ -221,7 +221,7 @@ public class TreeTest {
     testList.add(2);
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
   
@@ -240,7 +240,7 @@ public class TreeTest {
     testList.add(4);
     testList.add(6);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(6);
     
@@ -260,7 +260,7 @@ public class TreeTest {
     testList.add(4);
     testList.add(5);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(5);
@@ -281,7 +281,7 @@ public class TreeTest {
     testList.add(5);
     testList.add(6);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(6);
@@ -303,7 +303,7 @@ public class TreeTest {
     testList.add(4);
     testList.add(5);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(3);
@@ -330,7 +330,7 @@ public class TreeTest {
     testList.add(20);
     testList.add(29);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(6);
@@ -352,7 +352,7 @@ public class TreeTest {
   
   @Test (expected = NoSuchElementException.class)
   public void testPostOrder_EmptyTree() {
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.postOrder();
   }
   
@@ -361,7 +361,7 @@ public class TreeTest {
     List<Integer> testList = new ArrayList<>();
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     
     for (int i = 0; i < binarySearchTree.postOrder().size(); i++) {
@@ -379,7 +379,7 @@ public class TreeTest {
     testList.add(2);
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     
@@ -398,7 +398,7 @@ public class TreeTest {
     testList.add(6);
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(6);
     
@@ -418,7 +418,7 @@ public class TreeTest {
     testList.add(5);
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(5);
@@ -439,7 +439,7 @@ public class TreeTest {
     testList.add(6);
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(6);
@@ -462,7 +462,7 @@ public class TreeTest {
     testList.add(5);
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(3);
@@ -489,7 +489,7 @@ public class TreeTest {
     testList.add(6);
     testList.add(4);
     
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(4);
     binarySearchTree.add(2);
     binarySearchTree.add(6);
@@ -511,13 +511,13 @@ public class TreeTest {
   
   @Test (expected = NoSuchElementException.class)
   public void testContains_EmptyTree() {
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.contains(1);
   }
   
   @Test
   public void testContains_ValueIncluded() {
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(30);
     binarySearchTree.add(2);
     binarySearchTree.add(99);
@@ -534,7 +534,7 @@ public class TreeTest {
   
   @Test
   public void testContains_ValueNotIncluded() {
-    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
     binarySearchTree.add(30);
     binarySearchTree.add(2);
     binarySearchTree.add(99);
