@@ -12,26 +12,26 @@ public class TreeTest {
   
   @Test
   public void testIsEmpty_Empty() {
-    BinarySearchTree tree = new BinarySearchTree();
-    assertTrue("isEmpty_Empty should return true", tree.isEmpty());
+    BinarySearchTree binarySearchTree = new BinarySearchTree();
+    assertTrue("isEmpty_Empty should return true", binarySearchTree.isEmpty());
   }
   
   @Test
   public void testIsEmpty_OneVal() {
-    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-    tree.add(4);
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+    binarySearchTree.add(4);
 
-    assertFalse("isEmpty_OneVal should return false", tree.isEmpty());
+    assertFalse("isEmpty_OneVal should return false", binarySearchTree.isEmpty());
   }
 
   @Test
   public void testIsEmpty_MultipleOperations() {
-    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-    assertTrue(tree.isEmpty());
-    tree.add(4);
-    assertFalse(tree.isEmpty());
-    tree.add(5);
-    assertFalse(tree.isEmpty());
+    BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+    assertTrue(binarySearchTree.isEmpty());
+    binarySearchTree.add(4);
+    assertFalse(binarySearchTree.isEmpty());
+    binarySearchTree.add(5);
+    assertFalse(binarySearchTree.isEmpty());
   }
   
   @Test (expected = NoSuchElementException.class)

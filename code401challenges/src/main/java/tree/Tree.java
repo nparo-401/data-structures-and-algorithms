@@ -1,21 +1,27 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class Tree<T> {
   Node<T> root;
   
-  Tree() {
+  public Tree() {
     this.root = null;
+  }
+  
+  public void setRoot(Node<T> node) {
+    this.root = node;
+  }
+  
+  public Node<T> getRoot() {
+    return this.root;
   }
   
   public boolean isEmpty() {
     return this.root == null;
   }
     
-    public List<T> preOrder() {
+  public List<T> preOrder() {
     if (isEmpty()) {
       throw new NoSuchElementException();
     }
