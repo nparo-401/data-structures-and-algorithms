@@ -5,10 +5,16 @@ public class Node<T> {
   private Node<T> left;
   private Node<T> right;
   
-  Node(T value) {
+  public Node(T value) {
     this.value = value;
     this.left = null;
     this.right = null;
+  }
+  
+  public Node(T value, Node<T> left, Node<T> right) {
+    this.value = value;
+    this.left = left;
+    this.right = right;
   }
   
   public void setLeft(Node<T> node) {
@@ -17,6 +23,10 @@ public class Node<T> {
   
   public void setRight(Node<T> node) {
     this.right = node;
+  }
+  
+  public void setValue(T value) {
+    this.value = value;
   }
   
   public T getValue () {
