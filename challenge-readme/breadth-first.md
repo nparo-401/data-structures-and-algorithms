@@ -16,9 +16,9 @@ Create a  method called `breadthFirst(Tree<F> tree)` which changes returns a lis
 * Method:
   * `public static <F> List<F> breadthFirst(Tree<F> tree)`
 * Time and Space:
-  * `public static Tree<Object> fizzBuzz(Tree tree)`
+  * `public static <F> List<F> breadthFirst(Tree<F> tree)`
     * T: O(n)
-    * S: O(n)
+    * S: O(n) - create a new `List<F>` and `Queue<Node<F>>`
 
 ### Collaboration
 
