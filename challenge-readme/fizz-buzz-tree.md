@@ -25,10 +25,10 @@ Return the tree with its new values.
 * Time and Space:
   * `public static Tree<Object> fizzBuzz(Tree tree)`
     * T: O(n)
-    * S: O(n)
+    * S: O(n) - stack space
 
 ### Collaboration
-
+* Jack Kinne
 
 ### Solution
 ![fizz buzz tree](../assets/fizz-buzz-tree.jpg)

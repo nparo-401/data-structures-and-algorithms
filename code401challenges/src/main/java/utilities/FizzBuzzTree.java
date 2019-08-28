@@ -4,7 +4,7 @@ import tree.Node;
 import tree.Tree;
 
 public class FizzBuzzTree extends Tree<Object> {
-  private static void recursion (Node<Object> current) {
+  private static void recursion(Node<Object> current) {
     if (current != null) {
       recursion(current.getLeft());
       changer(current);

@@ -12,6 +12,7 @@
 8. [Animal Shelter](challenge-readme/animal-shelter.md)
 9. [Multi Bracket Validation](challenge-readme/multi-bracket.md)
 10. [Fizz Buzz Tree](challenge-readme/fizz-buzz-tree.md)
+11. [Breadth First](challenge-readme/breadth-first.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)

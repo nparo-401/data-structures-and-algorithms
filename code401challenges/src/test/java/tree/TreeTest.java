@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import static org.junit.Assert.*;
+import static tree.Tree.breadthFirst;
 
 public class TreeTest {
   
@@ -546,6 +547,40 @@ public class TreeTest {
     assertFalse(
      "testContains_ValueNotIncluded should return true",
      binarySearchTree.contains(19)
+    );
+  }
+  
+  @Test (expected = NoSuchElementException.class)
+  public void testBreadthFirst_EmptyList() {
+    Tree<Integer> tree = new Tree<>();
+    breadthFirst(tree);
+  }
+  
+  @Test
+  public void testBreadthFirst_MultipleLevels() {
+    Tree<Integer> tree = new Tree<>();
+    Node<Integer> item6 = new Node<>(30);
+    Node<Integer> item5 = new Node<>(27);
+    Node<Integer> item4 = new Node<>(2);
+    Node<Integer> item3 = new Node<>(12, item6, null);
+    Node<Integer> item2 = new Node<>(15, item5, null);
+    Node<Integer> item1 = new Node<>(3, item3, item4);
+    Node<Integer> root = new Node<>(20, item1, item2);
+    tree.setRoot(root);
+    
+    List<Integer> testList = new ArrayList<>();
+    testList.add(20);
+    testList.add(3);
+    testList.add(15);
+    testList.add(12);
+    testList.add(2);
+    testList.add(27);
+    testList.add(30);
+    
+    assertEquals(
+     "testBreadthFirst_MultipleLevels should return:",
+     testList,
+     breadthFirst(tree)
     );
   }
 }
