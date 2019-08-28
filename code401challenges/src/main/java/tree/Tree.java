@@ -1,5 +1,7 @@
 package tree;
 
+import stacksAndQueues.Queue;
+
 import java.util.*;
 
 public class Tree<T> {
@@ -65,6 +67,28 @@ public class Tree<T> {
       postOrder(current.getLeft(), response);
       postOrder(current.getRight(), response);
       response.add(current.getValue());
+    }
+    return response;
+  }
+  
+  public static <F> List<F> breadthFirst(Tree<F> tree) {
+    if (tree.isEmpty()) {
+      throw new NoSuchElementException();
+    }
+    
+    List<F> response = new ArrayList<>();
+    Queue<Node<F>> queue = new Queue<>();
+    queue.enqueue(tree.getRoot());
+    
+    while (!queue.isEmpty()) {
+      Node<F> current = queue.dequeue();
+      response.add(current.getValue());
+      if (current.getLeft() != null) {
+        queue.enqueue(current.getLeft());
+      }
+      if (current.getRight() != null) {
+        queue.enqueue(current.getRight());
+      }
     }
     return response;
   }
