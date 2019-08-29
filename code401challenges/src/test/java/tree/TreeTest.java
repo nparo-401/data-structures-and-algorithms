@@ -583,4 +583,56 @@ public class TreeTest {
      breadthFirst(tree)
     );
   }
+  
+  @Test (expected = NoSuchElementException.class)
+  public void testFindMaximumValue_EmptyTree() {
+    Tree<Integer> tree = new Tree<>();
+    tree.findMaximumValue();
+  }
+  
+  @Test
+  public void testFindMaximumValue_AllUniqueValues() {
+    Tree<Integer> tree = new Tree<>();
+    Node<Integer> item6 = new Node<>(30);
+    Node<Integer> item5 = new Node<>(27);
+    Node<Integer> item4 = new Node<>(2);
+    Node<Integer> item3 = new Node<>(12, item6, null);
+    Node<Integer> item2 = new Node<>(15, item5, null);
+    Node<Integer> item1 = new Node<>(3, item3, item4);
+    Node<Integer> root = new Node<>(20, item1, item2);
+    tree.setRoot(root);
+    
+    assertEquals(
+     "testFindMaximumValue_AllUniqueValues should return:",
+     30,
+     tree.findMaximumValue()
+    );
+  }
+  
+  @Test
+  public void testFindMaximumValue_WithDuplicateValues() {
+    Tree<Integer> tree = new Tree<>();
+    Node<Integer> item6 = new Node<>(27);
+    Node<Integer> item5 = new Node<>(27);
+    Node<Integer> item4 = new Node<>(2);
+    Node<Integer> item3 = new Node<>(10, item6, null);
+    Node<Integer> item2 = new Node<>(15, item5, null);
+    Node<Integer> item1 = new Node<>(3, item3, item4);
+    Node<Integer> root = new Node<>(20, item1, item2);
+    tree.setRoot(root);
+  
+    assertEquals(
+     "testFindMaximumValue_WithDuplicateValues should return:",
+     27,
+     tree.findMaximumValue()
+    );
+  }
+  
+  @Test (expected = IllegalStateException.class)
+  public void testFindMaximumValue_NonIntegerTypeCast() {
+    Tree<String> tree = new Tree<>();
+    Node<String> root = new Node<>("20");
+    tree.setRoot(root);
+    tree.findMaximumValue();
+  }
 }

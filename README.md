@@ -13,6 +13,7 @@
 9. [Multi Bracket Validation](challenge-readme/multi-bracket.md)
 10. [Fizz Buzz Tree](challenge-readme/fizz-buzz-tree.md)
 11. [Breadth First](challenge-readme/breadth-first.md)
+12. [Find Maximum Value](challenge-readme/find-max-val.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
