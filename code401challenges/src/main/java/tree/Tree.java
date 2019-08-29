@@ -92,4 +92,24 @@ public class Tree<T> {
     }
     return response;
   }
+  
+  private boolean isTypeInteger(T nodeVal) {
+    return nodeVal instanceof Integer;
+  }
+  
+  public int findMaximumValue() {
+    if (this.isEmpty()) {
+      throw new NoSuchElementException();
+    } else if (!isTypeInteger(this.getRoot().getValue())) {
+      throw new IllegalStateException("The Tree must be cast to the type of 'Integer' to use this method");
+    }
+    List<T> traversedTree = this.inOrder();
+    int maxVal = (int)traversedTree.get(0);
+    for (int i = 1; i < traversedTree.size(); i++) {
+      if (maxVal < (int)traversedTree.get(i)) {
+        maxVal = (int)traversedTree.get(i);
+      }
+    }
+    return maxVal;
+  }
 }
