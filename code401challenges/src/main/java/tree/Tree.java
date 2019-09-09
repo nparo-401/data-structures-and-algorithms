@@ -1,8 +1,9 @@
 package tree;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
 import stacksAndQueues.Queue;
-
-import java.util.*;
 
 public class Tree<T> {
   Node<T> root;
@@ -111,5 +112,17 @@ public class Tree<T> {
       }
     }
     return maxVal;
+  }
+  
+  public int getSumOdd(Node<Integer> node) {
+    int sum = 0;
+    if (node != null) {
+      if (node.getValue() % 2 != 0) {
+        sum += node.getValue();
+      }
+      sum += getSumOdd(node.getLeft());
+      sum += getSumOdd(node.getRight());
+    }
+    return sum;
   }
 }
