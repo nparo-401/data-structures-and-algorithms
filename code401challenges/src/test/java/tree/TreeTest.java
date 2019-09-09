@@ -621,6 +621,8 @@ public class TreeTest {
     Node<Integer> root = new Node<>(20, item1, item2);
     tree.setRoot(root);
   
+    System.out.println(tree.getSumOdd(tree.root));
+  
     assertEquals(
      "testFindMaximumValue_WithDuplicateValues should return:",
      27,
