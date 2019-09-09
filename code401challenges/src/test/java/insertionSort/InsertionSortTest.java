@@ -1,9 +1,9 @@
-package sorts;
+package insertionSort;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static sorts.InsertionSort.insertionSort;
+import static insertionSort.InsertionSort.insertionSort;
 
 public class InsertionSortTest {
   
