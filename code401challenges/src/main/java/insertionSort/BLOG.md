@@ -1,6 +1,6 @@
 # Insertion Sort
 #### Code
-[Insertion Sort](./src/main/java/insertionSort/InsertionSort.java)
+[Insertion Sort](InsertionSort.java)
 
 #### Description
 The insertion sort is a sorting method which is most effective on an array of limited size. This sort compares an element within the array to the next value and checks to see if it is greater than that element and moves the current element to the checked elements position (if the checked element is less than the current).
