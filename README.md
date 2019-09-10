@@ -15,6 +15,7 @@
 11. [Breadth First](challenge-readme/breadth-first.md)
 12. [Find Maximum Value](challenge-readme/find-max-val.md)
 13. [Insertion Sort](code401challenges/src/main/java/insertionSort/BLOG.md)
+14. [Merge Sort](code401challenges/src/main/java/mergeSort/BLOG.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
