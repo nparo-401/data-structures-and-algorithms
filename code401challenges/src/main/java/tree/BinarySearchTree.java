@@ -3,7 +3,7 @@ package tree;
 import java.util.NoSuchElementException;
 
 public class BinarySearchTree<T extends Comparable<T>> extends Tree<T> {
-  BinarySearchTree() {
+  public BinarySearchTree() {
     super();
   }
   
