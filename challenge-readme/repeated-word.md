@@ -5,7 +5,7 @@ Create a static method which returns the first word repeated in a sentence.
 * src/main/RepeatedWord
   * [RepeatedWord.java](../code401challenges/src/main/java/RepeatedWord/RepeatedWord.java)
 * src/test/RepeatedWord
-  * [RepeatedWordTest.java](../code401challenges/src/main/java/RepeatedWord/RepeatedWordTest.java)
+  * [RepeatedWordTest.java](../code401challenges/src/test/java/RepeatedWord/RepeatedWordTest.java)
 
 ### Challenge
 Create a  method called `repeatedWord(String sentence)` which takes in a long string of words and returns the first word that is repeated inside the sentence.
