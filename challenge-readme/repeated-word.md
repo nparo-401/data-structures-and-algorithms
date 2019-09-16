@@ -33,3 +33,4 @@ Create a  method called `repeatedWord(String sentence)` which takes in a long st
 * Melfi Perez
 * Renee Messick
 * Brandon Hurrington
+* [Regex Non-alphanumeric character strip](https://alvinalexander.com/blog/post/java/remove-non-alphanumeric-characters-java-string)
