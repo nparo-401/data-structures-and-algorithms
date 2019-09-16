@@ -12,7 +12,7 @@ The merge sort will use two methods:
 
 #### Effectiveness
 Time and Space:
-* Time: O(n)
+* Time: O(n log(n))
 * Space: O(n)
 
 The merge sort is in overall efficient method - it takes much less time than insertion sort - n time instead of n^2 time. However, it takes n space because of the stack space used in the recursive call.
