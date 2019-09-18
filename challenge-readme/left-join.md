@@ -3,9 +3,9 @@ Left joins two Hash Tables into one data structure.
 
 ### Links
 * src/main/TreeIntersection
-  * [TreeIntersection.java](../code401challenges/src/main/java/TreeIntersection/TreeIntersection.java)
+  * [LeftJoin.java](../code401challenges/src/main/java/HashTable/LeftJoin.java)
 * src/test/TreeIntersection
-  * [TreeIntersectionTest.java](../code401challenges/src/test/java/TreeIntersection/TreeIntersectionTest.java)
+  * [LeftJoinTest.java](../code401challenges/src/test/java/HashTable/LeftJoinTest.java)
 
 ### Challenge
 Create a  method called `leftJoin(HashTable<K,V> hashTable1, HashTable<K,V> hashTable2)` which takes in two hash tables and left joins them into one data structure and returns the result of that join.
