@@ -19,6 +19,7 @@
 15. [Quick Sort](code401challenges/src/main/java/quickSort/BLOG.md)
 16. [Repeated Word](challenge-readme/repeated-word.md)
 17. [Tree Intersection](challenge-readme/tree-intersection.md)
+18. [Left Join](challenge-readme/left-join.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
