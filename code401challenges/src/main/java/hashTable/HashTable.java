@@ -57,6 +57,8 @@ public class HashTable<K,V> {
     }
   }
   
+  public Node<K,V>[] getMap() { return this.map; }
+  
   @Override
   public String toString() {
     StringBuilder response = new StringBuilder();
