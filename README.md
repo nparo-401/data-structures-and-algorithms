@@ -26,3 +26,4 @@
 2. [Stacks and Queues](challenge-readme/stacks-and-queues.md)
 3. [Tree and Binary Search Tree](challenge-readme/tree-bst.md)
 4. [Hash Table Implementation](challenge-readme/hash-table.md)
+5. [Graph](challenge-readme/graph.md)
