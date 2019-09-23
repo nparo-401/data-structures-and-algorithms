@@ -5,7 +5,7 @@ Create a static method which returns a Set of the Graph vertices in their breadt
 * src/main/graph
   * [Graph.java](../code401challenges/src/main/java/graph/Graph.java)
 * src/test/graph
-  * [GraphTest.java](../code401challenges/src/main/java/graph/GraphTest.java)
+  * [GraphTest.java](../code401challenges/src/test/java/graph/GraphTest.java)
 
 ### Challenge
 Create a  method called `breadthFirst(Graph<F> graph, Vertex<F> root)` which changes returns a set of the nodes in breadth order (layer-by-layer) from the specified root.
