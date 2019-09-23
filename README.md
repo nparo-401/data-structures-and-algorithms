@@ -20,9 +20,11 @@
 16. [Repeated Word](challenge-readme/repeated-word.md)
 17. [Tree Intersection](challenge-readme/tree-intersection.md)
 18. [Left Join](challenge-readme/left-join.md)
+19. [Breadth First Graph](challenge-readme/bfg.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
 2. [Stacks and Queues](challenge-readme/stacks-and-queues.md)
 3. [Tree and Binary Search Tree](challenge-readme/tree-bst.md)
 4. [Hash Table Implementation](challenge-readme/hash-table.md)
+5. [Graph](challenge-readme/graph.md)
