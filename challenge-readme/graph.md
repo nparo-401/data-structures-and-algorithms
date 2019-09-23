@@ -1,4 +1,4 @@
-## Hash Table
+## Graph
 
 ### Challenge
 Create a class `Graph` with methods:
@@ -21,7 +21,8 @@ Create a class `Graph` with methods:
 ### Files
 * src/main/graph
   * [Graph.java](../code401challenges/src/main/java/graph/Graph.java)
-  * [Node.java](../code401challenges/src/main/java/graph/Node.java)
+  * [Vertex.java](../code401challenges/src/main/java/graph/Vertex.java)
+  * [Edge.java](../code401challenges/src/main/java/graph/Edge.java)
 * src/test/graph
   * [GraphTest.java](../code401challenges/src/test/java/graph/GraphTest.java)
 
