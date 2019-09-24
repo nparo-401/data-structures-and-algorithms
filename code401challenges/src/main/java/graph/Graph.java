@@ -45,6 +45,14 @@ public class Graph<T> {
     }
   }
   
+  public ArrayList<Edge<T>> getNeighbors(Vertex<T> vertex) {
+    return this.adjacencyList.get(vertex);
+  }
+  
+  public int size() {
+    return this.size;
+  }
+  
   public static <F> Set<Vertex<F>> depthFirst(Graph<F> graph, Vertex<F> root) {
     Set<Vertex<F>> visited = new LinkedHashSet<>();
     Stack<Vertex<F>> stack = new Stack<>();
@@ -80,14 +88,6 @@ public class Graph<T> {
       }
       return visited;
     }
-  }
-  
-  public ArrayList<Edge<T>> getNeighbors(Vertex<T> vertex) {
-    return this.adjacencyList.get(vertex);
-  }
-  
-  public int size() {
-    return this.size;
   }
   
   @Override
