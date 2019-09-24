@@ -1,11 +1,11 @@
-## Breadth First Graph
+## Get Edge Graph
 Create a static method which returns if there is a direct connection between a pair or set of edges.
 
 ### Links
 * src/main/graph
-  * [Graph.java](../code401challenges/src/main/java/graph/Graph.java)
+  * [GetEdge.java](../code401challenges/src/main/java/graph/GetEdge.java)
 * src/test/graph
-  * [GraphTest.java](../code401challenges/src/test/java/graph/GraphTest.java)
+  * [GetEdgeTest.java](../code401challenges/src/test/java/graph/GetEdgeTest.java)
 
 ### Challenge
 Create a  method called `getEdge(Graph<F> graph, ArrayList<Vertex<F>> route)` which checks if there is a direct connection between a pair or set of edges. This method will return `True, ${price}` or `False, $0`.
