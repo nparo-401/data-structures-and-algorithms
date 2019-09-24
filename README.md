@@ -21,6 +21,7 @@
 17. [Tree Intersection](challenge-readme/tree-intersection.md)
 18. [Left Join](challenge-readme/left-join.md)
 19. [Breadth First Graph](challenge-readme/bfg.md)
+20. [Get Edge Graph](challenge-readme/edge-graph.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
