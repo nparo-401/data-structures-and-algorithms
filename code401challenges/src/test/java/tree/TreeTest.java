@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import static org.junit.Assert.*;
+import static tree.BinarySearchTree.getDuplicates;
 import static tree.Tree.breadthFirst;
 
 public class TreeTest {
@@ -634,5 +635,21 @@ public class TreeTest {
     Node<String> root = new Node<>("20");
     tree.setRoot(root);
     tree.findMaximumValue();
+  }
+  
+  @Test
+  public void testDuplicates() {
+    Tree<Integer> tree = new Tree<>();
+    Node<Integer> item6 = new Node<>(27);
+    Node<Integer> item5 = new Node<>(27);
+    Node<Integer> item4 = new Node<>(2);
+    Node<Integer> item3 = new Node<>(10, item6, null);
+    Node<Integer> item2 = new Node<>(15, item5, null);
+    Node<Integer> item1 = new Node<>(3, item3, item4);
+    Node<Integer> root = new Node<>(20, item1, item2);
+    tree.setRoot(root);
+  
+    System.out.println(tree.inOrder());
+    System.out.println(getDuplicates(tree));
   }
 }
