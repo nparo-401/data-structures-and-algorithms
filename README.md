@@ -22,6 +22,7 @@
 18. [Left Join](challenge-readme/left-join.md)
 19. [Breadth First Graph](challenge-readme/bfg.md)
 20. [Get Edge Graph](challenge-readme/edge-graph.md)
+21. [Depth First Graph](challenge-readme/dfg.md)
 
 #### Labs
 1. [Linked List](challenge-readme/linked-list.md)
